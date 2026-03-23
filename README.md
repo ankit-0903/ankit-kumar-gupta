@@ -17,7 +17,6 @@ A premium, high-performance developer portfolio built with a focus on **SOLID pr
 - 🎨 **Premium UI/UX**: Custom terminal-themed design with smooth Framer Motion animations and "Reveal on Scroll" interactions.
 - 🛠️ **SOLID Architecture**: Highly modular component-based structure with custom hooks and centralized data management.
 - 🛰️ **Enterprise SEO**: Automated sitemaps, robots.txt, and comprehensive JSON-LD (Schema.org) integration for Google indexing.
-- 📊 **Analytics**: Integrated Google Analytics (GA4) with environment-variable toggles.
 - 🛡️ **Robust CI/CD**: 
     - **Husky & lint-staged**: Automated linting and testing on every commit.
     - **Vitest**: Suite of unit and smoke tests for core functionality.
