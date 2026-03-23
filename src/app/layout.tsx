@@ -18,32 +18,32 @@ export const metadata: Metadata = {
     default: "Portfolio of Ankit Kumar Gupta | Software Developer",
     template: "%s | Ankit Kumar Gupta"
   },
-  description: "Full-Stack Developer and Computer Science student specializing in scalable, AI-driven solutions and high-impact technical projects.",
+  description: "Professional Portfolio of Ankit Kumar Gupta. A Full-Stack Developer and Computer Science student specializing in building scalable software solutions, AI-driven applications, and high-impact technical projects.",
   keywords: ["Ankit Kumar Gupta", "Full-Stack Developer", "Software Engineer", "React Developer", "Next.js Portfolio", "AI Solutions"],
   authors: [{ name: "Ankit Kumar Gupta" }],
   creator: "Ankit Kumar Gupta",
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://ankit-gupta.dev", // Update this when you have a real URL
+    url: "https://ankit-kumar-gupta.vercel.app/",
     siteName: "Ankit Kumar Gupta Portfolio",
-    title: "Ankit Kumar Gupta | Full-Stack Developer",
-    description: "Building scalable software solutions for the future. Portfolio of Ankit Kumar Gupta.",
+    title: "Ankit Kumar Gupta | Software Developer Portfolio",
+    description: "Explore the professional portfolio of Ankit Kumar Gupta, a Full-Stack Developer specializing in React, Next.js, and AI-driven solutions. View my latest projects, technical skills, and educational background.",
     images: [
       {
-        url: "/og-image.png", // We can generate this later or use a screenshot
+        url: "/profile-photo.JPG",
         width: 1200,
         height: 630,
-        alt: "Ankit Kumar Gupta Portfolio",
+        alt: "Ankit Kumar Gupta - Software Developer",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Ankit Kumar Gupta | Full-Stack Developer",
-    description: "Full-Stack Developer and CS student specializing in scalable AI solutions.",
-    creator: "@ankit_gupta", // Update with your twitter handle
-    images: ["/og-image.png"],
+    title: "Ankit Kumar Gupta | Software Developer Portfolio",
+    description: "Explore the professional portfolio of Ankit Kumar Gupta, a Full-Stack Developer specializing in React, Next.js, and AI-driven solutions.",
+    creator: "@ankit_gupta",
+    images: ["/profile-photo.JPG"],
   },
   robots: {
     index: true,
@@ -81,12 +81,12 @@ export default function RootLayout({
               "@type": "Person",
               "name": "Ankit Kumar Gupta",
               "jobTitle": "Full-Stack Developer",
-              "url": "https://ankit-gupta.dev",
+              "url": "https://ankit-kumar-gupta.vercel.app/",
               "sameAs": [
                 "https://github.com/ankit-0903",
                 "https://www.linkedin.com/in/ankit-kumar-gupta-a39688234"
               ],
-              "description": "Full-Stack Developer and Computer Science student specializing in scalable, AI-driven solutions."
+              "description": "Professional Portfolio of Ankit Kumar Gupta. A Full-Stack Developer and Computer Science student specializing in building scalable software solutions."
             })
           }}
         />
