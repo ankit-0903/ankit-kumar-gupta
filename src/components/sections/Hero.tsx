@@ -7,9 +7,9 @@ export function Hero() {
   const { ideSnippet } = hero;
 
   return (
-    <section id="home" className="grid grid-cols-1 lg:grid-cols-12 min-h-screen items-center pt-8 gap-8">
+    <section id="home" className="flex flex-col lg:grid lg:grid-cols-12 min-h-screen items-center pt-8 gap-8">
       {/* Left Column - Text Content */}
-      <div className="flex flex-col justify-center items-start lg:col-span-7">
+      <div className="flex flex-col justify-center items-start lg:col-span-7 min-h-[calc(100vh-120px)] lg:min-h-0">
         <RevealWrapper>
           <h1 className="text-accent font-mono mb-4 lg:mb-7 ml-1">{hero.greeting}</h1>
         </RevealWrapper>
@@ -54,7 +54,7 @@ export function Hero() {
       </div>
 
       {/* Right Column - IDE Snippet */}
-      <div className="hidden lg:block lg:col-span-5 w-full">
+      <div className="lg:col-span-5 w-full mt-12 lg:mt-0 pb-20 lg:pb-0">
         <RevealWrapper>
           <div className="rounded-xl border-2 border-border/80 bg-[#0d1117] shadow-2xl shadow-accent/10 overflow-hidden font-mono text-[13px] leading-relaxed relative">
             {/* Glow effect */}
