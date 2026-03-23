@@ -13,10 +13,10 @@ const firaCode = Fira_Code({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://portfolio-akg.vercel.app'), // Replace with your actual domain when deployed
+  metadataBase: new URL('https://ankit-kumar-gupta.vercel.app/'), // Replace with your actual domain when deployed
   title: {
-    default: "Ankit Kumar | Portfolio",
-    template: "%s | Ankit Kumar"
+    default: "Portfolio of Ankit Kumar Gupta | Software Developer",
+    template: "%s | Ankit Kumar Gupta"
   },
   description: "Full-Stack Developer and Computer Science student specializing in scalable, AI-driven solutions and high-impact technical projects.",
   keywords: ["Ankit Kumar Gupta", "Full-Stack Developer", "Software Engineer", "React Developer", "Next.js Portfolio", "AI Solutions"],
