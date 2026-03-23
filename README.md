@@ -1,36 +1,99 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 Ankit Kumar Gupta | Professional Portfolio
 
-## Getting Started
+[![Vercel Deployment](https://img.shields.io/badge/Vercel-Deployed-black?logo=vercel)](https://ankit-kumar-gupta.vercel.app/)
+[![Next.js](https://img.shields.io/badge/Next.js-15-black?logo=next.js)](https://nextjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?logo=typescript)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind-CSS-38B2AC?logo=tailwind-css)](https://tailwindcss.com/)
 
-First, run the development server:
+A premium, high-performance developer portfolio built with a focus on **SOLID principles**, modern engineering patterns, and a dark terminal aesthetic. 🚀
+
+> **Live Demo**: [ankit-kumar-gupta.vercel.app](https://ankit-kumar-gupta.vercel.app/)
+
+---
+
+## ✨ Key Features
+
+- 🏎️ **Next.js & App Router**: Lightning-fast performance with Server Components and optimized routing.
+- 🎨 **Premium UI/UX**: Custom terminal-themed design with smooth Framer Motion animations and "Reveal on Scroll" interactions.
+- 🛠️ **SOLID Architecture**: Highly modular component-based structure with custom hooks and centralized data management.
+- 🛰️ **Enterprise SEO**: Automated sitemaps, robots.txt, and comprehensive JSON-LD (Schema.org) integration for Google indexing.
+- 📊 **Analytics**: Integrated Google Analytics (GA4) with environment-variable toggles.
+- 🛡️ **Robust CI/CD**: 
+    - **Husky & lint-staged**: Automated linting and testing on every commit.
+    - **Vitest**: Suite of unit and smoke tests for core functionality.
+- 📱 **Fully Responsive**: Optimized for every screen size, from mobile to ultra-wide displays.
+
+---
+
+## 🛠️ Tech Stack
+
+- **Core**: Next.js 15, React 19, TypeScript
+- **Styling**: Tailwind CSS
+- **Animations**: Framer Motion, Vanilla CSS (Custom Keyframes)
+- **Testing**: Vitest, React Testing Library
+- **CI/CD**: Husky, lint-staged, GitHub Actions (for automated quote updates)
+- **Tools**: ESLint, Prettier
+
+---
+
+## 📂 Project Structure
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+├── 📁 .github/workflows   # Automated CI/CD Actions
+├── 📁 .husky              # Git Hooks (Pre-commit Testing)
+├── 📁 public              # Optimized Assets & Favicons
+├── 📁 src
+│   ├── 📁 app             # App Router (Pages, Layouts, SEO)
+│   ├── 📁 components
+│   │   ├── 📁 common      # Reusable UI Atoms (Loaders, etc.)
+│   │   ├── 📁 layout      # Navbar, Sidebar, Custom Cursor
+│   │   └── 📁 sections    # Feature-specific Page Sections
+│   ├── 📁 data            # Centralized Site Content (Markdown/JSON)
+│   ├── 📁 hooks           # Custom Portfolio Logic
+│   └── 📁 styles          # Global Themes & Animations
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🚀 Getting Started
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1.  **Clone & Install**:
+    ```bash
+    git clone https://github.com/ankit-0903/ankit-kumar-gupta.git
+    cd ankit-kumar-gupta
+    npm install
+    ```
 
-## Learn More
+2.  **Environment Setup**:
+    Create a `.env.local` based on `.env.example`:
+    ```bash
+    NEXT_PUBLIC_GMAIL=your-email@gmail.com
+    NEXT_PUBLIC_FORMSPREE_URL=https://formspree.io/f/your-id
+    ```
 
-To learn more about Next.js, take a look at the following resources:
+3.  **Run Development Server**:
+    ```bash
+    npm run dev
+    ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+4.  **Test & Lint**:
+    ```bash
+    npm run test     # Run Vitest suite
+    npm run lint     # Check for code quality
+    ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 👔 Professional Summary
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+"I build software solutions for the future. I am a Full-Stack Developer and Computer Science student specializing in building scalable, AI-driven solutions and high-impact technical projects that solve real-world problems."
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+**Let's Connect!**
+- [LinkedIn](https://www.linkedin.com/in/ankit-kumar-gupta-a39688234)
+- [GitHub](https://github.com/ankit-0903)
+- [Portfolio](https://ankit-kumar-gupta.vercel.app/)
+
+---
+
+## 📜 License
+MIT © Ankit Kumar Gupta
