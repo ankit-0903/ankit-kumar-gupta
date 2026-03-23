@@ -29,7 +29,6 @@ A premium, high-performance developer portfolio built with a focus on **SOLID pr
 
 - **Core**: Next.js 15, React 19, TypeScript
 - **Styling**: Tailwind CSS
-- **Animations**: Framer Motion, Vanilla CSS (Custom Keyframes)
 - **Testing**: Vitest, React Testing Library
 - **CI/CD**: Husky, lint-staged, GitHub Actions (for automated quote updates)
 - **Tools**: ESLint, Prettier
