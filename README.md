@@ -14,7 +14,7 @@ A premium, high-performance developer portfolio built with a focus on **SOLID pr
 ## ✨ Key Features
 
 - 🏎️ **Next.js & App Router**: Lightning-fast performance with Server Components and optimized routing.
-- 🎨 **Premium UI/UX**: Custom terminal-themed design with smooth Framer Motion animations and "Reveal on Scroll" interactions.
+- 🎨 **Premium UI/UX**: Custom terminal-themed design with smooth Intersection Observer animations and "Reveal on Scroll" interactions.
 - 🛠️ **SOLID Architecture**: Highly modular component-based structure with custom hooks and centralized data management.
 - 🛰️ **Enterprise SEO**: Automated sitemaps, robots.txt, and comprehensive JSON-LD (Schema.org) integration for Google indexing.
 - 🛡️ **Robust CI/CD**: 
