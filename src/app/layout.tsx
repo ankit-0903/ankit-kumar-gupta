@@ -31,10 +31,10 @@ export const metadata: Metadata = {
     description: "Explore the professional portfolio of Ankit Kumar Gupta, a Full-Stack Developer specializing in React, Next.js, and AI-driven solutions. View my latest projects, technical skills, and educational background.",
     images: [
       {
-        url: "/profile-photo.JPG",
+        url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Ankit Kumar Gupta - Software Developer",
+        alt: "Ankit Kumar Gupta - Software Developer Portfolio",
       },
     ],
   },
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     title: "Ankit Kumar Gupta | Software Developer Portfolio",
     description: "Explore the professional portfolio of Ankit Kumar Gupta, a Full-Stack Developer specializing in React, Next.js, and AI-driven solutions.",
     creator: "@ankit_gupta",
-    images: ["/profile-photo.JPG"],
+    images: ["/og-image.png"],
   },
   robots: {
     index: true,
