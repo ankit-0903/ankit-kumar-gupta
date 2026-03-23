@@ -1,0 +1,33 @@
+name: Update Thought of the Day
+
+on:
+  schedule:
+    # Runs every day at midnight UTC (5:30 AM IST)
+    - cron: "0 0 * * *"
+  workflow_dispatch: # Allows manual trigger from GitHub UI
+
+jobs:
+  update-quote:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Run update-quotes script
+        run: node update-quotes.js
+
+      - name: Commit and push if quote changed
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add src/data/current-quote.json
+          git diff --staged --quiet || git commit -m "chore: update thought of the day [skip ci]"
+          git push

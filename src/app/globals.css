@@ -1,26 +1,177 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@layer base {
+
+  /* Dark mode is the permanent default */
+  :root {
+    --background: #09090b;
+    --surface: #18181b;
+    --border-color: #27272a;
+    --foreground: #fafafa;
+    --muted-foreground: #a1a1aa;
+    --subtle-foreground: #d4d4d8;
+    --accent: #818cf8;
+  }
+
+  /* Light mode — toggled via .light class on <html> */
+  html.light {
+    --background: #f8fafc;
+    --surface: #f1f5f9;
+    --border-color: #e2e8f0;
+    --foreground: #0f172a;
+    --muted-foreground: #475569;
+    --subtle-foreground: #334155;
+    --accent: #6366f1;
+  }
+}
+
+@keyframes custom-float {
+
+  0%,
+  100% {
+    transform: translateY(0px) scale(1);
+  }
+
+  50% {
+    transform: translateY(-15px) scale(1.05);
+  }
+}
+
+.animate-custom-float {
+  animation: custom-float 6s ease-in-out infinite;
 }
 
 @theme inline {
+  --breakpoint-xs: 475px;
   --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-border: var(--border-color);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --color-muted-foreground: var(--muted-foreground);
+  --color-subtle-foreground: var(--subtle-foreground);
+  --color-accent: var(--accent);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  --font-sans: "Inter", var(--font-inter), sans-serif;
+  --font-mono: "Fira Code", var(--font-fira-code), monospace;
+
+  /* Custom Marquee Animations */
+  --animate-marquee: marquee 30s linear infinite;
+  --animate-marquee-reverse: marquee-reverse 30s linear infinite;
+
+  /* Loader Animations */
+  --animate-loader-fade-out: loader-fade-out 2.8s cubic-bezier(0.645, 0.045, 0.355, 1) forwards;
+  --animate-draw-polygon: draw-polygon 1.8s cubic-bezier(0.645, 0.045, 0.355, 1) forwards;
+  --animate-fade-in-letter: fade-in-letter 2.2s cubic-bezier(0.645, 0.045, 0.355, 1) forwards;
+
+  @keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-33.333333%); }
+  }
+
+  @keyframes marquee-reverse {
+    0% { transform: translateX(-33.333333%); }
+    100% { transform: translateX(0); }
+  }
+
+  @keyframes loader-fade-out {
+    0%, 80% { opacity: 1; transform: translateY(0); pointer-events: auto; }
+    100% { opacity: 0; transform: translateY(-30px); pointer-events: none; visibility: hidden; }
+  }
+
+  @keyframes draw-polygon {
+    0% { stroke-dasharray: 0 400; stroke-dashoffset: 0; }
+    100% { stroke-dasharray: 400 0; stroke-dashoffset: 0; }
+  }
+
+  @keyframes fade-in-letter {
+    0%, 40% { opacity: 0; transform: scale(0.8); }
+    100% { opacity: 1; transform: scale(1); }
   }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-background);
+  color: var(--color-muted-foreground);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  cursor: none;
+}
+
+@media (max-width: 1024px) {
+
+  body,
+  a,
+  button,
+  .cursor-pointer {
+    cursor: auto !important;
+  }
+}
+
+::selection {
+  background-color: color-mix(in srgb, var(--color-accent) 20%, transparent);
+  color: var(--color-foreground);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-border);
+  border: 2px solid transparent;
+  background-clip: padding-box;
+  border-radius: 20px;
+  transition: background-color 0.3s;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--color-accent);
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.reveal-hidden {
+  opacity: 0;
+  transform: translateY(20px);
+  visibility: hidden;
+  transition: opacity 0.5s cubic-bezier(0.645, 0.045, 0.355, 1), transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+  will-change: opacity, visibility, transform;
+}
+
+.animate-reveal {
+  opacity: 1;
+  transform: none;
+  visibility: visible;
+}
+
+/* Ensure interactive elements don't show the hand cursor */
+a,
+button,
+[role="button"],
+.cursor-pointer {
+  cursor: none !important;
+}
+
+@media (max-width: 1024px) {
+
+  html,
+  body,
+  a,
+  button,
+  [role="button"],
+  .cursor-pointer {
+    cursor: auto !important;
+  }
 }
