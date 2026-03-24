@@ -16,7 +16,7 @@ export function About() {
       </h2>
 
       <div className="flex flex-col md:flex-row gap-8 md:gap-12">
-        <div className="w-full md:w-3/5 order-2 md:order-1 text-muted-foreground text-lg leading-relaxed space-y-4 text-justify">
+        <div className="w-full md:w-3/5 order-2 md:order-1 text-muted-foreground text-lg leading-[1.6] space-y-5 text-left md:pr-4">
           {about.paragraphs.map((p, i) => (
             <p key={i}>
               {/* Note: In a real system we might use a markdown renderer for the inline spans, 

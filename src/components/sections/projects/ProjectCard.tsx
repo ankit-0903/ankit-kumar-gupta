@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { Project } from "@/hooks/types";
+import { useState } from "react";
 
 interface ProjectCardProps {
   project: Project;
@@ -10,25 +11,37 @@ interface ProjectCardProps {
 
 export function ProjectCard({ project, index }: ProjectCardProps) {
   const isEven = index % 2 === 0;
+  const [isActive, setIsActive] = useState(false);
 
   return (
     <div className="relative grid grid-cols-1 md:grid-cols-12 items-center gap-y-8 md:gap-x-4">
       {/* Image Container */}
-      <div className={`w-full aspect-video bg-border rounded overflow-hidden shadow-2xl relative group z-10 md:col-span-6 ${!isEven ? 'md:col-start-7' : 'md:col-start-1'} md:row-start-1`}>
-        {project.image ? (
-          <>
-            <div className="absolute inset-0 bg-accent/20 mix-blend-multiply group-hover:opacity-0 transition-opacity duration-500 z-10 pointer-events-none"></div>
-            <Image 
-              src={project.image} 
-              alt={project.title} 
-              fill 
-              sizes="(max-width: 768px) 100vw, 50vw"
-              className="object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
-            />
-          </>
-        ) : (
-          <div className="w-full h-full bg-accent/20 group-hover:bg-transparent transition-all duration-300 rounded flex items-center justify-center text-muted-foreground font-mono">Project Image</div>
-        )}
+      <div className={`w-full relative z-10 md:col-span-6 ${!isEven ? 'md:col-start-7' : 'md:col-start-1'} md:row-start-1 flex items-center`}>
+        <div 
+          className="block w-full relative aspect-video cursor-pointer"
+          onClick={() => setIsActive(!isActive)}
+          onMouseEnter={() => setIsActive(true)}
+          onMouseLeave={() => setIsActive(false)}
+        >
+          {/* Photo container */}
+          <div className="w-full h-full rounded overflow-hidden bg-accent/20 shadow-2xl relative z-10">
+            {project.image ? (
+              <>
+                <div className={`absolute inset-0 bg-accent/20 mix-blend-multiply transition-opacity duration-500 z-10 pointer-events-none ${isActive ? 'opacity-0' : 'opacity-100'}`}></div>
+                <Image 
+                  src={project.image} 
+                  alt={project.title} 
+                  fill 
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className={`object-cover transition-all duration-500 ${isActive ? 'grayscale-0' : 'grayscale'}`}
+                  priority={index === 0}
+                />
+              </>
+            ) : (
+              <div className={`w-full h-full bg-accent/20 transition-all duration-300 rounded flex items-center justify-center text-muted-foreground font-mono relative z-10 ${isActive ? 'bg-transparent' : 'bg-accent/20'}`}>Project Image</div>
+            )}
+          </div>
+        </div>
       </div>
 
       {/* Content Container */}
