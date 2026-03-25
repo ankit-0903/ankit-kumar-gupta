@@ -8,7 +8,8 @@ import { Projects } from "@/components/sections/Projects";
 import { Awards } from "@/components/sections/Awards";
 import { Contact } from "@/components/sections/Contact";
 import { Loader } from "@/components/common/Loader";
-import { PaletteDemo } from "@/components/sections/PaletteDemo";
+import { Footer } from "@/components/layout/Footer";
+import { BackToTop } from "@/components/common/BackToTop";
 
 export default function Home() {
   return (
@@ -27,19 +28,10 @@ export default function Home() {
         <Projects />
         <Awards />
         <Contact />
-
-        {/* TEMPORARY PALETTE DEMO */}
-        <div className="mt-32 border-t border-border pt-16">
-          <PaletteDemo />
-        </div>
       </main>
 
-      {/* FOOTER */}
-      <footer className="text-center font-mono py-6 text-sm text-muted-foreground mt-24 hover:text-accent transition-colors cursor-pointer pb-8">
-        <a href="https://github.com/ankit-0903" target="_blank" rel="noopener noreferrer">
-          Designed & Built by Ankit Kumar Gupta
-        </a>
-      </footer>
+      <Footer />
+      <BackToTop />
     </>
   );
 }

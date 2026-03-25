@@ -38,6 +38,7 @@ export interface HeroData {
   tagline: string;
   bio: string;
   ctaText: string;
+  hireMeLink: string;
   resumeText: string;
   resumeLink: string;
   ideSnippet: {

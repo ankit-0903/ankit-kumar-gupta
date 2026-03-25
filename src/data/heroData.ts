@@ -4,8 +4,9 @@ export const heroData = {
   tagline: "I build software solutions for the future.",
   bio: "I'm a Full-Stack Developer and Computer Science student specializing in building scalable, AI-driven solutions. Currently, I am focused on delivering high-impact technical projects that solve real-world problems.",
   ctaText: "Hire me!",
+  hireMeLink: "https://www.linkedin.com/in/ankit-kumar-gupta-a39688234",
   resumeText: "Resume",
-  resumeLink: "/resume.pdf",
+  resumeLink: "https://drive.google.com/file/d/1EbVurKgSKh1UwmwTCFYhAvOOw7ZueKUM/view",
   ideSnippet: {
     title: "coder",
     name: "Ankit Kumar Gupta",

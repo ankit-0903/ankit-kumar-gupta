@@ -7,9 +7,9 @@ export function Hero() {
   const { ideSnippet } = hero;
 
   return (
-    <section id="home" className="flex flex-col lg:grid lg:grid-cols-12 min-h-screen items-center pt-8 gap-8">
+    <section id="home" className="flex flex-col lg:grid lg:grid-cols-12 min-h-screen items-center pt-20 md:pt-32 lg:pt-8 gap-8 px-2 md:px-0">
       {/* Left Column - Text Content */}
-      <div className="flex flex-col justify-center items-start lg:col-span-7 min-h-[calc(100vh-120px)] lg:min-h-0">
+      <div className="flex flex-col justify-center items-start lg:col-span-7 min-h-[calc(100vh-140px)] lg:min-h-0">
         <RevealWrapper>
           <h1 className="text-accent font-mono mb-4 lg:mb-7 ml-1">{hero.greeting}</h1>
         </RevealWrapper>
@@ -36,7 +36,9 @@ export function Hero() {
         <RevealWrapper>
           <div className="flex flex-wrap items-center gap-4 mt-2">
             <a
-              href="#contact"
+              href={hero.hireMeLink}
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-accent bg-transparent border border-accent rounded px-7 py-4 font-mono text-sm leading-none transition-all duration-200 inline-block hover:-translate-x-1 hover:-translate-y-1 hover:shadow-[4px_4px_0px_0px_var(--color-accent)]"
             >
               {hero.ctaText}

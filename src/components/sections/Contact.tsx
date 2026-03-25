@@ -65,7 +65,7 @@ export function Contact() {
         <div className="w-full md:w-1/2">
           <RevealWrapper>
             <form
-              className="flex flex-col gap-4 bg-surface/30 backdrop-blur-sm border border-border/80 rounded-2xl p-5 md:p-6 shadow-sm"
+              className="flex flex-col gap-4 bg-surface/30 backdrop-blur-sm border border-border/80 rounded-2xl pt-5 pb-3 px-5 md:pt-6 md:pb-4 md:px-6 shadow-sm"
               onSubmit={handleSubmit}
             >
               <h3 className="text-xl font-bold text-foreground mb-2">Send me a message</h3>
@@ -133,7 +133,7 @@ export function Contact() {
                 )}
               </button>
               
-              <div aria-live="polite" className="mt-2">
+              <div aria-live="polite" className={status === 'success' || status === 'error' ? "mt-2" : ""}>
                 {status === 'success' && (
                   <p className="text-green-400 text-xs font-mono text-center animate-fade-in">
                     Thanks! I&apos;ll get back to you soon.

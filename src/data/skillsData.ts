@@ -23,8 +23,6 @@ export const skillsData = [
   { name: "MongoDB", url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" },
   { name: "MySQL", url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" },
   { name: "AWS", url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg", invert: true },
-  { name: "EC2", url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg" },
-  { name: "RDS", url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-plain.svg" },
 
   // Tools & Platforms
   { name: "Git", url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" },
@@ -34,8 +32,6 @@ export const skillsData = [
   { name: "Postman", url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg" },
   { name: "Figma", url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" },
   { name: "Linux", url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" },
-  { name: "Windows", url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/windows8/windows8-original.svg" },
-  { name: "Microsoft 365", url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftoffice/microsoftoffice-original.svg" },
 ];
 
 export const skillCategories = [
@@ -53,10 +49,10 @@ export const skillCategories = [
   },
   {
     title: 'Database & Cloud',
-    skills: ['MongoDB', 'MySQL', 'AWS', 'EC2', 'RDS'],
+    skills: ['MongoDB', 'MySQL', 'AWS'],
   },
   {
     title: 'Tools & Platforms',
-    skills: ['Git', 'GitHub', 'Docker', 'Vercel', 'Postman', 'Figma', 'VS Code', 'Canva', 'Linux', 'Windows', 'Microsoft 365'],
+    skills: ['Git', 'GitHub', 'Docker', 'Vercel', 'Postman', 'Figma', 'VS Code', 'Canva', 'Linux'],
   },
 ];

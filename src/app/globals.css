@@ -64,28 +64,66 @@
   --animate-fade-in-letter: fade-in-letter 2.2s cubic-bezier(0.645, 0.045, 0.355, 1) forwards;
 
   @keyframes marquee {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-33.333333%); }
+    0% {
+      transform: translateX(0);
+    }
+
+    100% {
+      transform: translateX(-33.333333%);
+    }
   }
 
   @keyframes marquee-reverse {
-    0% { transform: translateX(-33.333333%); }
-    100% { transform: translateX(0); }
+    0% {
+      transform: translateX(-33.333333%);
+    }
+
+    100% {
+      transform: translateX(0);
+    }
   }
 
   @keyframes loader-fade-out {
-    0%, 80% { opacity: 1; transform: translateY(0); pointer-events: auto; }
-    100% { opacity: 0; transform: translateY(-30px); pointer-events: none; visibility: hidden; }
+
+    0%,
+    80% {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+
+    100% {
+      opacity: 0;
+      transform: translateY(-30px);
+      pointer-events: none;
+      visibility: hidden;
+    }
   }
 
   @keyframes draw-polygon {
-    0% { stroke-dasharray: 0 400; stroke-dashoffset: 0; }
-    100% { stroke-dasharray: 400 0; stroke-dashoffset: 0; }
+    0% {
+      stroke-dasharray: 0 400;
+      stroke-dashoffset: 0;
+    }
+
+    100% {
+      stroke-dasharray: 400 0;
+      stroke-dashoffset: 0;
+    }
   }
 
   @keyframes fade-in-letter {
-    0%, 40% { opacity: 0; transform: scale(0.8); }
-    100% { opacity: 1; transform: scale(1); }
+
+    0%,
+    40% {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
   }
 }
 

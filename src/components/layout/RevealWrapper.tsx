@@ -22,8 +22,8 @@ export function RevealWrapper({ children, className = '', delay = 0 }: { childre
   }, []);
 
   return (
-    <div 
-      ref={ref} 
+    <div
+      ref={ref}
       className={`reveal-hidden ${className}`}
       style={{ animationDelay: `${delay}ms` }}
     >

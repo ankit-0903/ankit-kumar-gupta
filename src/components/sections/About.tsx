@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import { RevealWrapper } from "@/components/layout/RevealWrapper";
 import { usePortfolioData } from "@/hooks/usePortfolioData";
 
 export function About() {
@@ -10,10 +11,12 @@ export function About() {
 
   return (
     <section id="about" className="py-16 md:py-24 max-w-4xl mx-auto">
-      <h2 className="flex items-center text-foreground text-2xl md:text-3xl font-bold mb-10 whitespace-nowrap">
-        <span className="text-accent font-mono text-xl mr-3 font-normal">{about.number}</span> {about.title}
-        <div className="ml-5 w-full md:w-72 h-[1px] bg-border"></div>
-      </h2>
+      <RevealWrapper>
+        <h2 className="flex items-center text-foreground text-xl md:text-2xl font-bold mb-10 whitespace-nowrap">
+          <span className="text-accent font-mono text-xl mr-3 font-normal">{about.number}</span> {about.title} ✨
+          <div className="ml-5 w-full md:w-72 h-[1px] bg-border"></div>
+        </h2>
+      </RevealWrapper>
 
       <div className="flex flex-col md:flex-row gap-8 md:gap-12">
         <div className="w-full md:w-3/5 order-2 md:order-1 text-muted-foreground text-lg leading-[1.6] space-y-5 text-left md:pr-4">
@@ -27,7 +30,7 @@ export function About() {
         </div>
 
         <div className="w-full md:w-2/5 max-w-[250px] md:max-w-[300px] mx-auto md:mx-0 order-1 md:order-2">
-          <div 
+          <div
             className="relative group cursor-pointer"
             onClick={() => setIsActive(!isActive)}
             onMouseEnter={() => setIsActive(true)}
