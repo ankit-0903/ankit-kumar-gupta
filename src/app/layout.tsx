@@ -57,14 +57,13 @@ export const metadata: Metadata = {
 
 import { CustomCursor } from "@/components/layout/CustomCursor";
 import { ErrorBoundary } from "@/components/layout/ErrorBoundary";
-import GoogleAnalytics from "@/components/common/GoogleAnalytics";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const GA_ID = process.env.NEXT_PUBLIC_GA_ID || "";
 
   return (
     <html
@@ -72,7 +71,6 @@ export default function RootLayout({
       className={`${inter.variable} ${firaCode.variable} scroll-smooth`}
     >
       <head>
-        <GoogleAnalytics GA_MEASUREMENT_ID={GA_ID} />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -98,6 +96,9 @@ export default function RootLayout({
           </div>
           {children}
         </ErrorBoundary>
+        {process.env.NEXT_PUBLIC_GA_ID && (
+          <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID} />
+        )}
       </body>
     </html>
   );

@@ -16,8 +16,8 @@ export const featuredProjects: Project[] = [
       'Built a predictive recommendation engine analyzing environmental data point arrays to generate data-driven fertilizer insights.'
     ],
     tech: ['React', 'JavaScript', 'Python', 'PyTorch', 'Flask'],
-    github: 'https://github.com/ankit-0903',
-    external: '#',
+    github: '#',
+    external: 'https://sih-1638.vercel.app/',
     image: '/crop-disease.jpeg'
   },
   {
@@ -28,7 +28,7 @@ export const featuredProjects: Project[] = [
       'Optimized internal game state management by utilizing linked lists for dynamic movement capabilities and rapid collision detection.'
     ],
     tech: ['C++', 'Arrays', 'OpenGL', 'Linked Lists'],
-    github: 'https://github.com/ankit-0903',
+    github: 'https://github.com/ankit-0903/2D-Snake-Game-for-Desktop',
     external: '#'
   },
   {
@@ -39,7 +39,7 @@ export const featuredProjects: Project[] = [
       'Provided strategic recommendations for agriculture, afforestation, and new renewable energy projects.'
     ],
     tech: ['HTML5', 'CSS3', 'JavaScript'],
-    github: 'https://github.com/ankit-0903',
-    external: ''
+    github: 'https://github.com/ankit-0903/Post-Mining-Land-Usage-Website',
+    external: '#'
   }
 ];
