@@ -34,7 +34,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
                   fill 
                   sizes="(max-width: 768px) 100vw, 50vw"
                   className={`object-cover transition-all duration-500 ${isActive ? 'grayscale-0' : 'grayscale'}`}
-                  priority={index === 0}
+                  priority={index < 2}
                 />
               </>
             ) : (

@@ -20,6 +20,7 @@ A premium, high-performance developer portfolio built with a focus on **SOLID pr
 - 🛡️ **Robust CI/CD**: 
     - **Husky & lint-staged**: Automated linting and testing on every commit.
     - **Vitest**: Suite of unit and smoke tests for core functionality.
+- 📈 **Google Analytics**: Integrated with GA4 tracking via `@next/third-parties` for privacy-compliant, performant user insights.
 - 📱 **Fully Responsive**: Optimized for every screen size, from mobile to ultra-wide displays.
 
 ---
@@ -30,6 +31,7 @@ A premium, high-performance developer portfolio built with a focus on **SOLID pr
 - **Styling**: Tailwind CSS
 - **Testing**: Vitest, React Testing Library
 - **CI/CD**: Husky, lint-staged, GitHub Actions (for automated quote updates)
+- **Analytics**: GA4 via `@next/third-parties/google`
 - **Tools**: ESLint, Prettier
 
 ---
@@ -67,6 +69,7 @@ A premium, high-performance developer portfolio built with a focus on **SOLID pr
     ```bash
     NEXT_PUBLIC_GMAIL=your-email@gmail.com
     NEXT_PUBLIC_FORMSPREE_URL=https://formspree.io/f/your-id
+    NEXT_PUBLIC_GA_ID=G-XXXXXXXXXX # Optional
     ```
 
 3.  **Run Development Server**:
