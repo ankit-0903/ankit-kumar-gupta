@@ -1,11 +1,12 @@
 # 🚀 Ankit Kumar Gupta | Professional Portfolio
 
 [![Vercel Deployment](https://img.shields.io/badge/Vercel-Deployed-black?logo=vercel)](https://ankit-kumar-gupta.vercel.app/)
-[![Next.js](https://img.shields.io/badge/Next.js-15-black?logo=next.js)](https://nextjs.org/)
+[![Next.js](https://img.shields.io/badge/Next.js-16-black?logo=next.js)](https://nextjs.org/)
+[![Bun](https://img.shields.io/badge/Bun-Fast-fbf0df?logo=bun&logoColor=black)](https://bun.sh/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?logo=typescript)](https://www.typescriptlang.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind-CSS-38B2AC?logo=tailwind-css)](https://tailwindcss.com/)
 
-A premium, high-performance developer portfolio built with a focus on **SOLID principles**, modern engineering patterns, and a dark terminal aesthetic. 🚀
+A premium, high-performance developer portfolio built with a focus on **SOLID principles**, modern engineering patterns, and a dark terminal aesthetic. Engineered for speed and efficiency using the **Bun** runtime. 🚀
 
 > **Live Demo**: [ankit-kumar-gupta.vercel.app](https://ankit-kumar-gupta.vercel.app/)
 
@@ -13,13 +14,14 @@ A premium, high-performance developer portfolio built with a focus on **SOLID pr
 
 ## ✨ Key Features
 
-- 🏎️ **Next.js & App Router**: Lightning-fast performance with Server Components and optimized routing.
+- 🏎️ **Bun Runtime**: Blazing fast installations, builds, and execution environment.
 - 🎨 **Premium UI/UX**: Custom terminal-themed design with smooth Intersection Observer animations and "Reveal on Scroll" interactions.
 - 🛠️ **SOLID Architecture**: Highly modular component-based structure with custom hooks and centralized data management.
 - 🛰️ **Enterprise SEO**: Automated sitemaps, robots.txt, and comprehensive JSON-LD (Schema.org) integration for Google indexing.
 - 🛡️ **Robust CI/CD**: 
-    - **Husky & lint-staged**: Automated linting and testing on every commit.
+    - **Husky & lint-staged**: Automated linting and testing on every commit via Bun.
     - **Vitest**: Suite of unit and smoke tests for core functionality.
+- 🤖 **Automated Workflows**: GitHub Actions integration that automatically updates the "Thought of the Day" daily at midnight UTC.
 - 📈 **Google Analytics**: Integrated with GA4 tracking via `@next/third-parties` for privacy-compliant, performant user insights.
 - 📱 **Fully Responsive**: Optimized for every screen size, from mobile to ultra-wide displays.
 
@@ -27,20 +29,21 @@ A premium, high-performance developer portfolio built with a focus on **SOLID pr
 
 ## 🛠️ Tech Stack
 
-- **Core**: Next.js 15, React 19, TypeScript
+- **Core**: Next.js 16, React 19, TypeScript, Bun Runtime
+- **Package Manager**: Bun
 - **Styling**: Tailwind CSS
 - **Testing**: Vitest, React Testing Library
-- **CI/CD**: Husky, lint-staged, GitHub Actions (for automated quote updates)
+- **CI/CD**: Husky, lint-staged, GitHub Actions
 - **Analytics**: GA4 via `@next/third-parties/google`
-- **Tools**: ESLint, Prettier
+- **Tools**: ESLint 9 (Flat Config), Prettier
 
 ---
 
 ## 📂 Project Structure
 
 ```bash
-├── 📁 .github/workflows   # Automated CI/CD Actions
-├── 📁 .husky              # Git Hooks (Pre-commit Testing)
+├── 📁 .github/workflows   # Automated Daily Quote Update & CI/CD
+├── 📁 .husky              # Git Hooks (Pre-commit Testing & Linting)
 ├── 📁 public              # Optimized Assets & Favicons
 ├── 📁 src
 │   ├── 📁 app             # App Router (Pages, Layouts, SEO)
@@ -61,7 +64,7 @@ A premium, high-performance developer portfolio built with a focus on **SOLID pr
     ```bash
     git clone https://github.com/ankit-0903/ankit-kumar-gupta.git
     cd ankit-kumar-gupta
-    npm install
+    bun install
     ```
 
 2.  **Environment Setup**:
@@ -74,13 +77,13 @@ A premium, high-performance developer portfolio built with a focus on **SOLID pr
 
 3.  **Run Development Server**:
     ```bash
-    npm run dev
+    bun run dev
     ```
 
 4.  **Test & Lint**:
     ```bash
-    npm run test     # Run Vitest suite
-    npm run lint     # Check for code quality
+    bun run test     # Run Vitest suite
+    bun run lint     # Check for code quality (ESLint 9)
     ```
 
 ---

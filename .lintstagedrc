@@ -1,6 +1,6 @@
 {
   "src/**/*.{ts,tsx,js,jsx}": [
     "eslint --fix",
-    "vitest related --run"
+    "bun vitest related --run"
   ]
 }
